@@ -1,23 +1,23 @@
 # Scalable-Agent-MVP
 ai-financial-agent/
-│
-├── README.md
-├── requirements.txt
-├── main.py                   # Main agent loop
-├── agent/
-│   ├── __init__.py
-│   ├── planner.py           # Task planning logic
-│   ├── memory.py            # Memory system (Chroma/FAISS or flat)
-│   ├── tools.py             # Scrapers, APIs, utils
-│   ├── analyzer.py          # Core logic for correlation (stocks ↔ housing)
-│   └── nlp.py               # LLM calls + news summarization
-│
-├── data/
-│   ├── raw/                 # Raw scraped data
-│   ├── processed/           # Cleaned + parsed
-│   └── memory.json          # Memory file if local
-│
-├── notebooks/
-│   └── experiment.ipynb     # For trying models or correlation formulas
-│
-└── streamlit_app.py         # Optional UI to display reports
+# 🧠 AI Financial Market Agent
+
+This project is an intelligent AI agent that monitors stock market trends, analyzes financial news, and estimates their impact on real estate prices using NLP and light data modeling.
+
+## 🛠 Features
+- Web-scrapes stock market + news headlines
+- Summarizes financial news using GPT
+- Correlates signals with housing market indicators
+- Builds memory over time (tracks changing insights)
+- Optional: Streamlit report viewer
+
+## 💻 Stack
+- Python, LangChain, OpenAI API, FAISS or ChromaDB
+- yFinance, newspaper3k, Ray (optional)
+- Streamlit (optional UI)
+
+## 📦 Setup
+```bash
+pip install -r requirements.txt
+python main.py
+
